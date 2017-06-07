@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.png" type="image/png">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Английский - для Вас и Ваших детей в городе Сочи. Лучший EnglishLandClub</title>
+    <title><?php bloginfo('name');?></title>
 
     <!-- Bootstrap -->
     
@@ -69,41 +69,7 @@
 <?php wp_head(); ?>
 </head>
 <body>
-    <section class="head">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2">
-                    <img src="<?php bloginfo('template_url'); ?>/logotip.png" alt="" class="logotip">
-                </div>
-                <div class="col-md-8">
-                    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="#h1" class="scrollme">О нас</a></li>
-              <li><a href="#h2" class="scrollme">Процесс обучения</a></li>
-              <li><a href="#h3" class="scrollme">Стоимость</a></li>
-              <li><a href="#h4" class="scrollme">Отзывы</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-                </div>
-                <div class="col-md-2 right nopadl nopadr">
-                    <p class="phone book">+7 (000) 000-00-00</p>
-                    <a href="http://w-webs.ru" class="begfree heavy" data-toggle="modal" data-target="#m1" onclick="yaCounter35612965.reachGoal('Button1'); return true;">начать бесплатно</a>
-                </div>
-            </div>
-        </div>
-    </section>
+<?php get_header(); ?>
     <section class="two">
         <div class="container">
            <div class="row">
@@ -337,7 +303,7 @@ English Land Club</p>
                 <div class="col-md-12 text-center">
                     <p class="heavy ourpupils">Наши ученики уже давно поняли это<br>    
 и выбрали для себя Academa English, потому что</p>
-               <div style="visibility: hidden; animation-iteration-count: infinite; animation-name: none;" class=" wow bounce" alt="" data-wow-iteration="infinite"><img src="botarrow.png" class="imgbots"></div>
+               <div style="visibility: hidden; animation-iteration-count: infinite; animation-name: none;" class=" wow bounce" alt="" data-wow-iteration="infinite"><img src="<?php bloginfo('template_url'); ?>/botarrow.png" class="imgbots"></div>
                 </div>
             </div>
         </div>
@@ -817,13 +783,13 @@ intermediate до Advanced</p></div>
                             <p class="whatican heavy shadow">Вырос до уровня advanced и продвинулся в карьере</p>
                             <p class="textotz book">Я много работаю и ценю свои деньги и время. Когда подбирал школу английского, я предъявлял весьма жесткие и точные критерии: Во-первых, чтобы не тратили мое время на ненужные знания. Во-вторых, мне был нужен конкретный результат: чтобы после курса я мог общаться с иностранными коллегами. Академа, как оказалось, соответствует обоим критериям, поэтому я уже занимаюсь на продвинутом курсе.</p>
                         </div></div><div style="width: 945px; margin-right: 0px;" class="owl-item cloned"><div class="item text-center">
-                            <div class="avatar" style="background-image: url('avatar.png');"></div>
+                            <div class="avatar" style="background-image: url('<?php bloginfo('template_url'); ?>/avatar.png');"></div>
                             <p class="name demi">Татьяна Авдеева</p>
                             <a href="https://vk.com/id94458054" target="_top" class="vk demi">я Вконтакте</a>
                             <p class="whatican heavy shadow">Первый раз хожу на курсы с удовольствием</p>
                             <p class="textotz book">Я шла с целью научиться хорошо говорить, потому что по работе говорить приходится немало. Очень боялась, что буду отставать от других и что буду плохо понимать, но на пробном занятии мне подобрали группу, состоящую из людей моего уровня. Сейчас занимаюсь уже 5-й месяц и уровень вырос очень сильно – это замечают и коллеги, и начальник. Очень благодарна Academa English и скоро планирую начать продвинутый курс!</p>
                         </div></div><div style="width: 945px; margin-right: 0px;" class="owl-item cloned"><div class="item text-center">
-                            <div class="avatar" style="background-image: url('avatar2.png');"></div>
+                            <div class="avatar" style="background-image: url('<?php bloginfo('template_url'); ?>/avatar2.png');"></div>
                             <p class="name demi">Рудольф Меликян</p>
                             <a href="https://vk.com/id1998827" target="_top" class="vk demi">я Вконтакте</a>
                             <p class="whatican heavy shadow">Занимался с репетитором, но перешел в Academa English</p>
@@ -842,34 +808,34 @@ intermediate до Advanced</p></div>
                 </div>
             </div>
             <div class="row mb100">
-                <div style="visibility: hidden; animation-delay: 0.2s; animation-name: none;" class="col-md-3 text-center wow fadeIn" data-wow-delay="0.2s">
-                   <span class="ednas"><img src="1_001.png" alt=""></span>
-                    <img src="1_002.png" alt="">
+                <div style="<?php wp_add_inline_style();?>visibility: hidden; animation-delay: 0.2s; animation-name: none;" class="col-md-3 text-center wow fadeIn" data-wow-delay="0.2s">
+                   <span class="ednas"><img src="<?php bloginfo('template_url'); ?>/1_001.png" alt=""></span>
+                    <img src="<?php bloginfo('template_url'); ?>/1_002.png" alt="">
                     <p class="whatdo book">Вы записываетесь<br>
 на пробное занятие</p>
                 </div>
-                <div style="visibility: hidden; animation-delay: 0.6s; animation-name: none;" class="col-md-6 text-center wow fadeIn" data-wow-delay="0.6s">
-                    <img src="3_001.png" alt="">
+                <div style="<?php wp_add_inline_style();?>visibility: hidden; animation-delay: 0.6s; animation-name: none;" class="col-md-6 text-center wow fadeIn" data-wow-delay="0.6s">
+                    <img src="<?php bloginfo('template_url'); ?>/3_001.png" alt="">
                     <p class="whatdo book">Вы оплачиваете<br>
 курс</p>
                 </div>
-                <div style="visibility: hidden; animation-delay: 1s; animation-name: none;" class="col-md-3 text-center wow fadeIn" data-wow-delay="1s">
-                   <span class="ednas patk"><img src="5_001.png" alt=""></span>
-                    <img src="5_002.png" alt="">
+                <div style="<?php wp_add_inline_style();?>visibility: hidden; animation-delay: 1s; animation-name: none;" class="col-md-3 text-center wow fadeIn" data-wow-delay="1s">
+                   <span class="ednas patk"><img src="<?php bloginfo('template_url'); ?>/5_001.png" alt=""></span>
+                    <img src="<?php bloginfo('template_url'); ?>/5_002.png" alt="">
                     <p class="whatdo book">Вы получаете сертификат<br>
 по окончании курса</p>
                 </div>
             </div>
             <div class="row rel">
                <span class="polosi"></span>
-                <div style="visibility: hidden; animation-delay: 0.4s; animation-name: none;" class="col-md-3 pl42 col-md-offset-2 text-center wow fadeIn" data-wow-delay="0.4s">
-                    <img src="2_001.png" alt="">
+                <div style="<?php wp_add_inline_style();?>visibility: hidden; animation-delay: 0.4s; animation-name: none;" class="col-md-3 pl42 col-md-offset-2 text-center wow fadeIn" data-wow-delay="0.4s">
+                    <img src="<?php bloginfo('template_url'); ?>/2_001.png" alt="">
                     <p class="whatdo book">Мы подбираем<br>
 Вам подходящую
 группу</p>
                 </div>
-                <div style="visibility: hidden; animation-delay: 0.8s; animation-name: none;" class="col-md-6 pl82 text-center wow fadeIn" data-wow-delay="0.8s">
-                     <img src="4_001.png" alt="">
+                <div style="<?php wp_add_inline_style();?>visibility: hidden; animation-delay: 0.8s; animation-name: none;" class="col-md-6 pl82 text-center wow fadeIn" data-wow-delay="0.8s">
+                     <img src="<?php bloginfo('template_url'); ?>/4_001.png" alt="">
                     <p class="whatdo book">Мы отправляем Вам <br>
 приглашение на e-mail и начинаем <br>
 с Вами заниматься</p>
@@ -927,13 +893,13 @@ intermediate до Advanced</p></div>
             <div class="row icsns rel">
                <span class="part1"></span>
                 <div class="col-md-12 text-center">
-                    <img src="i1.png" alt="">
+                    <img src="<?php bloginfo('template_url'); ?>/i1.png" alt="">
                     <p class="nizicn book">В EnglishLandClub вы осваиваете весь материал на <span>100%</span></p>
                 </div>
             </div>
             <div class="row icsns">
                 <div class="col-md-12 text-center">
-                    <img src="i2.png" alt="">
+                    <img src="<?php bloginfo('template_url'); ?>/i2.png" alt="">
                     <p class="nizicn book">Наши отзывчивые преподаватели всегда готовы поработать с вами<br>
 дополнительно и детально объяснить любой непонятный момент урока</p>
                 </div>
@@ -941,7 +907,7 @@ intermediate до Advanced</p></div>
             <div class="row icsns rel">
                <span class="part2"></span>
                 <div class="col-md-12 text-center">
-                    <img src="i3.png" alt="">
+                    <img src="<?php bloginfo('template_url'); ?>/i3.png" alt="">
                     <p class="nizicn book">Служба поддержки поможет наверстать<br>
 упущенное в любое удобное для вас время</p>
                 </div>
@@ -953,21 +919,7 @@ intermediate до Advanced</p></div>
             </div>
         </div>
     </section>
-    <section class="footer mobc">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2">
-                    <img src="logotip.png" alt="" class="logotip">
-                </div>
-                <div class="col-md-6">
-                    <a href="http://w-webs.ru" class="polotic book" data-toggle="modal" data-target="#pol">Политика конфиденциальности</a>
-                </div>
-                <div class="col-md-4 right">
-                    <a href="http://w-webs.ru" target="_top"><img src="up.png" alt=""></a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <?php get_footer(); ?>
     <div class="modal fade" id="m1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
