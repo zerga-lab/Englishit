@@ -73,32 +73,38 @@
     <section class="two">
         <div class="container">
            <div class="row">
+		   <?php if ( have_posts() ) : query_posts('cat=2');
+					while (have_posts()) : the_post(); ?>
                <div class="col-md-12">
-                    <p class="ttle">Онлайн-курсы английского языка<br>
-English Land Club</p>
-       <div class="bgbord">За ваши успехи отвечаем МЫ</div>
-       <p class="want heavy">А хотите прямо сегодня <span>бесплатно<br>
-проведем</span> для Вас урок? На нем мы:</p>
+                    <p class="ttle"><?php echo get_cat_name(2);?></p>
+<!-- Подзаголовок -->
+       <div class="bgbord"><?php echo category_description(2); ?></div>
+	  <!-- Описание -->
+
+       <p class="want heavy"><?php echo (get_post_meta($post->ID, 'h2', true)); ?></p>
               <span class="linia"></span>
                </div>
            </div>
            <div class="row">
                <div class="col-md-4 text-center">
                    <p class="numbr">01</p>
-                   <p class="subnum book">Научим Вас<br>
-новым словам</p>
+<!-- Секция 01 -->
+
+                   <p class="subnum book"><?php echo (get_post_meta($post->ID, '01', true)); ?><br>
+</p>
                </div>
                <div class="col-md-4 text-center">
                    <p class="numbr">02</p>
-                   <p class="subnum book" style="padding-left: 19px;">Поможем заговорить<br>
-(Вы скажете первые предложения<br>
-прямо на этом занятии)</p>
+<!-- Секция 02 -->
+			<p class="subnum book" style="padding-left: 19px;"><?php echo (get_post_meta($post->ID, '02', true)); ?></p>
                </div>
-               <div class="col-md-4 text-center">
+			   <div class="col-md-4 text-center">
                    <p class="numbr">03</p>
-                   <p class="subnum book">Определим ваш уровень<br> и подберем для вас<br> группу</p>
+<!-- Секция 03 --> 
+                   <p class="subnum book"><?php echo (get_post_meta($post->ID, '03', true)); ?></p>
                </div>
            </div>
+		     <? endwhile; endif; wp_reset_query(); ?>
            <div class="row">
                <div class="col-md-12 text-center">
                    <button class="but1" data-toggle="modal" data-target="#m2" onclick="yaCounter35612965.reachGoal('Button1'); return true;"></button>
@@ -107,51 +113,64 @@ English Land Club</p>
            <div class="row">
                <div class="col-md-3 nopadr">
                    <div class="bgwwithborder">
-                       <p class="trd heavy">Устали?</p>
-                       <p class="subtrd book">От нудных занятий<br>
-и самостоятельной<br>
-зубрежки английских<br>
-слов?</p>
+				   	 
+<!-- Устали --> 
+				   <?php if ( have_posts() ) : query_posts('p=265');
+					while (have_posts()) : the_post(); ?>
+                       <p class="trd heavy"><?php the_title(); ?></p>
+                       <p class="subtrd book"><?php the_content(); ?></p>
                   <button class="but2" data-toggle="modal" data-target="#m2" onclick="yaCounter35612965.reachGoal('Button1'); return true;"></button>
                    </div>
                </div>
+			   <? endwhile; endif; wp_reset_query(); ?>
                <div class="col-md-4 col-md-offset-1">
                    <div class="bgwwithborder" style="border-radius: 50px;">
-                       <p class="trd heavy">Ищете?</p>
-                       <p class="subtrd book">Надёжную школу, <br>
-в которой гарантированно <br>
-ставят грамотный <br>
-английский?</p>
+<!-- Ищите --> 
+				   <?php if ( have_posts() ) : query_posts('p=262');
+					while (have_posts()) : the_post(); ?>
+                       <p class="trd heavy"><?php the_title(); ?></p>
+                       <p class="subtrd book"><?php the_content(); ?></p>
                   <button class="but2" data-toggle="modal" data-target="#m2" onclick="yaCounter35612965.reachGoal('Button1'); return true;"></button> 
                    </div>
                </div>
+			   <? endwhile; endif; wp_reset_query(); ?>
                <div class="col-md-3 nopadl nopadr col-md-offset-1">
                    <div class="bgwwithborder">
-                       <p class="trd heavy">Надоело?</p>
-                       <p class="subtrd book">Изучать только сухую <br>
-теорию и хочется <br>
-наконец заговорить <br>
-по- английски?</p>
+<!-- Надоело -->   
+				    <?php if ( have_posts() ) : query_posts('p=268');
+					while (have_posts()) : the_post(); ?>
+                       <p class="trd heavy"><?php the_title(); ?></p>
+                        <p class="subtrd book"><?php the_content(); ?></p>
                   <button class="but2" data-toggle="modal" data-target="#m2" onclick="yaCounter35612965.reachGoal('Button1'); return true;"></button> 
                    </div>
                </div>
+			   <? endwhile; endif; wp_reset_query(); ?>
            </div>
            <div class="row">
                <div class="col-md-12 text-center">
-                   <p class="znak">Знакомо?</p>
-                   <p class="subznak book">Наши ученики тоже беспокоились об этом, <br>
-пока не начали заниматься в <span class="heavy">EnglishLandClub</span></p>
+<!-- Знакомо --> 
+			   <?php if ( have_posts() ) : query_posts('p=270');
+					while (have_posts()) : the_post(); ?>
+                   <p class="znak"><?php the_title(); ?></p>
+                   <p class="subznak book"><?php the_content(); ?></p>
                </div>
            </div>
+		    <? endwhile; endif; wp_reset_query(); ?>
         </div>
     </section>
     <section class="three">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h2>Почему мы уверены, что<br>
-<span class="gol">английский язык - это легко?</span></h2>
-               <p class="youdon shadow heavy">Возможно, вы не знали о том, что: </p>
+<!-- easy english --> 
+					<?php if ( have_posts() ) : query_posts('p=281');
+					while (have_posts()) : the_post(); ?>
+                    <h2><?php the_content(); ?></h2>
+					<? endwhile; endif; wp_reset_query(); ?>
+<!-- Do you know --> 
+					<?php if ( have_posts() ) : query_posts('cat=15');
+					while (have_posts()) : the_post(); ?>
+ <p class="youdon shadow heavy"><?php the_content(); ?></p>
                <span class="linia mb85"></span>
                 </div>
             </div>
@@ -160,44 +179,43 @@ English Land Club</p>
                     <img src="<?php bloginfo('template_url'); ?>/20per.png" alt="" class="per1">
                 </div>
                 <div class="col-md-3 text-center">
-                    <p class="centered1 demi">В базовый лексикон<br>
-английского языка<br>
-входят менее</p>
-               <div class="menee heavy shadow">2 400 слов</div>
+                    <p class="centered1 demi"><?php echo (get_post_meta($post->ID, 'baselexen', true)); ?></p>
+               <div class="menee heavy shadow"><?php echo (get_post_meta($post->ID, '2400', true)); ?></div>
                 </div>
                 <div class="col-md-3">
                     <img src="<?php bloginfo('template_url'); ?>/80er.png" alt="" class="per2">
                 </div>
                 <div class="col-md-3 text-center">
-                    <p class="centered2 demi">Базовый лексикон<br>
-русского языка включает<br>
-в себя примерно</p>
-                <div class="menee heavy shadow ruskame">24 000 слов</div>
+                    <p class="centered2 demi"><?php echo (get_post_meta($post->ID, 'baselexru', true)); ?></p>
+                <div class="menee heavy shadow ruskame"><?php echo (get_post_meta($post->ID, '24000', true)); ?></div>
                 </div>
             </div>
+			
             <div class="row">
-                <p class="shadow heavy iesli">И если вы их знаете, то уже сможете прочитать<br>
-75% текста или поддержать любой разговор</p>
-           <p class="subiesli demi shadow">Все остальные блоки и барьеры существуют только в нашей голове</p>
+                <p class="shadow heavy iesli"><?php echo (get_post_meta($post->ID, 'ifyoucan', true)); ?></p>
+           <p class="subiesli demi shadow"><?php echo (get_post_meta($post->ID, 'bar', true)); ?></p>
             </div>
         </div>
+		<? endwhile; endif; wp_reset_query(); ?>
     </section>
+	<!-- ЧАВО --> 
     <section class="four">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h2 style="margin-bottom: 65px;" id="h1">Также нас часто спрашивают:</h2>
+		
+                    <h2 style="margin-bottom: 65px;" id="h1"><?php echo get_cat_name(4);?></p></h2>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-7 nopadr brdrbt">
                    <span class="eden">01</span>
-                    <p class="pravdali demi" style="padding-top: 24px;">А правда ли, что нужно будет заучивать<br>
-наизусть слова и читать непонятные тексты?</p>
-               <p class="answeronit ">Нет, у нас другой подход – никакой зубрежки. Все новые знания <br>
-вы тут же применяете в своей речи – это увеличивает запомина- <br>
-емость слов на 70%, а также не дает вам заскучать на уроке</p>
+				   <?php if ( have_posts() ) : query_posts('p=289');
+					while (have_posts()) : the_post(); ?>
+                    <p class="pravdali demi" style="padding-top: 24px;"><?php the_title(); ?></p>
+               <p class="answeronit "><?php the_content(); ?></p>
                 </div>
+				<? endwhile; endif; wp_reset_query(); ?>
                 <div class="col-md-5 text-center">
                     <img src="<?php bloginfo('template_url'); ?>/icn1.png" alt="" class="icnka">
                 </div>
@@ -208,23 +226,22 @@ English Land Club</p>
                 </div>
                 <div class="col-md-7 nopadr brdrbt" style="min-height: 310px;">
                    <span class="eden" style="left: -47px;">02</span>
-                    <p class="pravdali demi" style="padding-top: 24px; padding-left: 0px;">А что, если онлайн-обучение окажется<br>    
-неэффективным и я ничему не научусь?</p>
-               <p class="answeronit " style="padding-left: 0px; font-size: 19px;">Онлайн-классы Academa English ничем не отличаются от обучения <br>
-в реальной в жизни, за исключением одной детали – уроки у нас ведут <br>
-профессионалы. Для этого мы собрали мастеров своего дела, которые <br>
-буквально “за руку” приведут вас к результату</p>
+				   <?php if ( have_posts() ) : query_posts('p=291');
+					while (have_posts()) : the_post(); ?>
+                    <p class="pravdali demi" style="padding-top: 24px; padding-left: 0px;"><?php the_title(); ?></p>
+               <p class="answeronit " style="padding-left: 0px; font-size: 19px;"><?php the_content(); ?></p>
                 </div>
+				<? endwhile; endif; wp_reset_query(); ?>
             </div>
             <div class="row">
                 <div class="col-md-7 nopadr brdrbt">
                    <span class="eden">03</span>
-                    <p class="pravdali demi" style="padding-top: 24px;">А вдруг придется учить граммати- <br>
-ческие правила и будет непонятно?</p>
-               <p class="answeronit ">На наших занятиях грамматика подается очень простым, <br>
-но точным языком. В результате, к концу обучения вы раз- <br>
-говариваете на чистом английском без ошибок и исправлений</p>
+				     <?php if ( have_posts() ) : query_posts('p=294');
+					while (have_posts()) : the_post(); ?>
+                    <p class="pravdali demi" style="padding-top: 24px;"><?php the_title(); ?></p>
+               <p class="answeronit "><?php the_content(); ?></p>
                 </div>
+				<? endwhile; endif; wp_reset_query(); ?>
                 <div class="col-md-5 text-center">
                     <img src="<?php bloginfo('template_url'); ?>/icn3.png" alt="" class="icnka">
                 </div>
@@ -235,10 +252,12 @@ English Land Club</p>
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h2 class="letstart black">Хватит вопросов, <br>
-давайте начинать!</h2>
+				 <?php if ( have_posts() ) : query_posts('p=316');
+					while (have_posts()) : the_post(); ?>
+                    <?php the_content(); ?>
                 </div>
-            </div>
+				<? endwhile; endif; wp_reset_query(); ?>
+				</div>
             <div class="row">
                 <div class="col-md-12 text-center nopadl nopadr">
                     <form action="hhtp://w-webs.ru" novalidate="novalidate" class="myform">
@@ -251,25 +270,28 @@ English Land Club</p>
             </div>
         </div>
     </section>
-    <section class="six">
+	<!--Представьте, что вы свободно говорите на английском-->
+   <section class="six">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h2 class="black">Представьте, что вы свободно<br>
-говорите на английском</h2>
-               <p class="subziza heavy">Как изменилась Ваша жизнь?</p>
+				<?php if ( have_posts() ) : query_posts('p=297');
+					while (have_posts()) : the_post(); ?>
+                    <h2 class="black"><?php the_title();?></h2>
+               <p class="subziza heavy"><?php the_content();?></p>
                <p class="linn"></p>
                 </div>
-            </div>
+				<? endwhile; endif; wp_reset_query(); ?>
+			</div>
             <div class="row mb150 rel">
                <span class="tropa"></span>
                 <div class="col-md-6 nopadl nopadr">
-                    <p class="heavy skak" style="padding-top: 45px;">Скачок в профессиональном развитии  </p>
-                    <p class="subskak book">Уверенное владение английским открывает для вас двери<br>
-в серьезные компании, позволяет претендовать на новые<br>
-должности, а наш сертификат служит убедительным<br>
-приложением к вашему резюме</p>
+				<?php if ( have_posts() ) : query_posts('p=320');
+					while (have_posts()) : the_post(); ?>
+                    <p class="heavy skak" style="padding-top: 45px;"><?php the_title();?></p>
+                    <p class="subskak book"><?php the_content();?></p>
                 </div>
+				<? endwhile; endif; wp_reset_query(); ?>
                 <div class="col-md-6">
                     <img src="<?php bloginfo('template_url'); ?>/icn4.png" alt="" class="mn icns">
                 </div>
@@ -280,107 +302,106 @@ English Land Club</p>
                     <img src="<?php bloginfo('template_url'); ?>/icn5.png" alt="" class="mn icns">
                 </div>
                 <div class="col-md-7 nopadl nopadr">
-                    <p class="heavy skak" style="padding-top: 40px;">Путешествия по всему миру</p>
-                    <p class="subskak book">Вы смело посещаете любые страны, ведь теперь <br>
-вас понимают везде,а с друзьями, приобретенными <br>
-в поездках, вы свободно общаетесь через сеть Интернет</p>
+				<?php if ( have_posts() ) : query_posts('p=322');
+					while (have_posts()) : the_post(); ?>
+				<p class="heavy skak" style="padding-top: 40px;"><?php the_title();?></p>
+                    <p class="subskak book"><?php the_content();?></p>
                 </div>
-                
+				<? endwhile; endif; wp_reset_query(); ?>
             </div>
             <div class="row">
                 <div class="col-md-6 col-md-offset-2 nopadl nopadr">
-                    <p class="heavy skak">Доступ к зарубежным сайтам </p>
-                    <p class="subskak book">Понимая английский, вы наравне с жителями Европы <br>
-пользуетесь иностранными ресурсами,первыми полу- <br>
-чаете доступ к информации, которая еще не переведена <br>
-на русский язык, включая сериалы, книги и фильмы </p>
+				<?php if ( have_posts() ) : query_posts('p=328');
+					while (have_posts()) : the_post(); ?>
+                    <p class="heavy skak"><?php the_title();?></p>
+                    <p class="subskak book"><?php the_content();?></p>
                 </div>
+				<? endwhile; endif; wp_reset_query(); ?>
                 <div class="col-md-4 right">
                     <img src="<?php bloginfo('template_url'); ?>/icn6.png" alt="" class="mn icns">
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <p class="heavy ourpupils">Наши ученики уже давно поняли это<br>    
-и выбрали для себя Academa English, потому что</p>
-               <div style="visibility: hidden; animation-iteration-count: infinite; animation-name: none;" class=" wow bounce" alt="" data-wow-iteration="infinite"><img src="<?php bloginfo('template_url'); ?>/botarrow.png" class="imgbots"></div>
-                </div>
-            </div>
+				<?php if ( have_posts() ) : query_posts('p=326');
+					while (have_posts()) : the_post(); ?>
+                 <p class="heavy ourpupils"><?php the_content();?></p>				
+               <div style=" <?php wp_add_inline_style();?> visibility: hidden; animation-iteration-count: infinite; animation-name: none;" class=" wow bounce" alt="" data-wow-iteration="infinite"><img src="<?php bloginfo('template_url'); ?>/botarrow.png" class="imgbots"></div>            
+				</div>
+				<? endwhile; endif; wp_reset_query(); ?>			
+            </div> 
         </div>
     </section>
+<!-- Потому что-->
     <section class="seven">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="owl-carousel owl-theme owl-loaded">
-    
+<div class="owl-stage-outer"><div style="<?php wp_add_inline_style();?>transform: translate3d(-2280px, 0px, 0px); transition: all 0s ease 0s; width: 6840px;" class="owl-stage"><div style="width: 1140px; margin-right: 0px;" class="owl-item cloned"><div class="item">
         
-    
-<div class="owl-stage-outer"><div style="transform: translate3d(-2280px, 0px, 0px); transition: all 0s ease 0s; width: 6840px;" class="owl-stage"><div style="width: 1140px; margin-right: 0px;" class="owl-item cloned"><div class="item">
-        <div class="row">
+		<div class="row">
             <div class="col-md-4 col-xs-6 fulsxss">
                 <p class="odns"><img src="<?php bloginfo('template_url'); ?>/1.png" alt="">01</p>
-                <p class="zam heavy">Заметные<br>
-результаты</p>
-           <span class="linsk"></span>
-           <p class="whatinthere medium">Поможем вам<br>
-заговорить с первых<br>
-занятий</p>
+                <!-- заметные результаты-->
+				<?php if ( have_posts() ) : query_posts('p=357');
+					while (have_posts()) : the_post(); ?>
+				<p class="zam heavy"><?php the_title();?></p>
+				           <span class="linsk"></span>
+           <?php the_content();?>
+		   <? endwhile; endif; wp_reset_query(); ?>
             </div>
             <div class="col-md-4 col-xs-6 fulsxss">
                 <p class="odns"><img src="<?php bloginfo('template_url'); ?>/2.png" alt="">02</p>
-                <p class="zam heavy">Английский<br>
-с доставкой на дом </p>
+                <!--Английский с доставкой на дом-->
+				<?php if ( have_posts() ) : query_posts('p=337');
+					while (have_posts()) : the_post(); ?>
+				<p class="zam heavy"><?php the_title();?></p>
            <span class="linsk"></span>
-           <p class="whatinthere medium">Подключиться к нам можно <br>
-из любого места, где есть <br>
-интернет. Занимайтесь дома, <br>
-в командировке или даже <br>
-на отдыхе</p>
+           <?php the_content();?>
+			<? endwhile; endif; wp_reset_query(); ?>
             </div>
             <div class="col-md-4 col-xs-6 fulsxss">
                 <p class="odns"><img src="<?php bloginfo('template_url'); ?>/3.png" alt="">03</p>
-                <p class="zam heavy">Комфортное<br>
-обучение</p>
+                <!--Комфортное обучение-->
+				<?php if ( have_posts() ) : query_posts('p=339');
+					while (have_posts()) : the_post(); ?>
+				<p class="zam heavy"><?php the_title();?></p>
            <span class="linsk"></span>
-           <p class="whatinthere medium">Мы подаем информацию <br>
-оптимально: не спешим, но <br>
-и не замедляем ход обучения, <br>
-как это часто делают другие</p>
+           <?php the_content();?>
             </div>
-
- 
+		<? endwhile; endif; wp_reset_query(); ?>
+		<!--Сертификат по окончании курса -->
             <div class="col-md-4 col-xs-6 fulsxss">
                 <p class="odns"><img src="<?php bloginfo('template_url'); ?>/4.png" alt="">04</p>
-                <p class="zam heavy">Сертификат по<br>
-окончании курса </p>
+                <?php if ( have_posts() ) : query_posts('p=341');
+					while (have_posts()) : the_post(); ?>
+				<p class="zam heavy"><?php the_title();?></p>
            <span class="linsk"></span>
-           <p class="whatinthere medium">Помимо знаний и навыков, <br>
-вы получите сертификат, <br>
-подтверждающий ваш <br>
-уровень</p>
-            </div>
-            <div class="col-md-4 col-xs-6 fulsxss">
+           <?php the_content();?>
+            <? endwhile; endif; wp_reset_query(); ?>
+			</div>
+			<div class="col-md-4 col-xs-6 fulsxss">
                 <p class="odns"><img src="<?php bloginfo('template_url'); ?>/5.png" alt="">05</p>
-                <p class="zam heavy">У нас нет<br>
-отстающих</p>
+                <!--У нас нет отстающих -->
+				<?php if ( have_posts() ) : query_posts('p=343');
+					while (have_posts()) : the_post(); ?>
+				<p class="zam heavy"><?php the_title();?></p>
            <span class="linsk"></span>
-           <p class="whatinthere medium">Нам важны ваши успехи, <br>
-поэтому мы создали команду <br>
-поддержки, которая повторно <br>
-разъяснит любой непонятый урок</p>
+           <?php the_content();?>
             </div>
+			<? endwhile; endif; wp_reset_query(); ?>
             <div class="col-md-4 col-xs-6 fulsxss">
                 <p class="odns"><img src="<?php bloginfo('template_url'); ?>/6.png" alt="">06</p>
-                <p class="zam heavy">Квалифицированные<br>
-преподаватели</p>
+                
+				<!--Квалифицированные преподаватели -->
+				<?php if ( have_posts() ) : query_posts('p=345');
+					while (have_posts()) : the_post(); ?>
+				<p class="zam heavy"><?php the_title();?></p>
            <span class="linsk"></span>
-           <p class="whatinthere medium">Каждый провёл более 3 000 <br>
-занятий в течение последних <br>
-5 лет, окончил МГУ или МГИМО <br>
-и владеет сертификатом препо- <br>
-давателя английского языка</p>
+           <?php the_content();?>
             </div>
+			<? endwhile; endif; wp_reset_query(); ?>
         </div>
     </div></div><div style="width: 1140px; margin-right: 0px;" class="owl-item cloned"><div class="item">
         <div class="row">
@@ -652,63 +673,63 @@ English Land Club</p>
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h2>кому подходит обучение<br>
-в academa english</h2>
+				<?php if ( have_posts() ) : query_posts('p=366');
+					while (have_posts()) : the_post(); ?>
+                    <h2><?php the_title();?></h2>
                 </div>
+				<? endwhile; endif; wp_reset_query(); ?>
             </div>
             <div class="row">
                 <div class="col-md-4">
                    <span class="gora1"></span>
                     <div class="backtar backtar1 text-center">
-                        <div class="headfm"><p class="lvl heavy">Начальный уровень </p></div>
-                        <div class="bodyfm"><p class="aboutlvl book">Этот курс подойдет для<br>
-вас, если вы раньше вообще<br>
-не изучали английский или<br>
-хотите начать с самых<br>
-основ </p></div>
-                   <div class="footfm"><p class="result book"><span>Результат:</span> Поднимем<br>
-Вас от уровня Beginner до<br>
-уровня Pre-intermediate</p></div>
+					<!-- Уровни-->
+				<!-- начальный-->
+					<?php if ( have_posts() ) : query_posts('p=368');
+					while (have_posts()) : the_post(); ?>
+                        <div class="headfm"><p class="lvl heavy"><?php the_title();?></p></div>
+                        <div class="bodyfm"><?php the_content();?></p></div>
+                   <div class="footfm"><p class="result book"><span>Результат: </span><?php echo (get_post_meta($post->ID, 'rez1', true)); ?><br>
+</div>
+<? endwhile; endif; wp_reset_query(); ?>
                    <div class="butka"><button class="but4" data-toggle="modal" data-target="#m3" onclick="yaCounter35612965.reachGoal('Button1'); return true;"></button></div>
                     </div>
                 </div>
                 <div class="col-md-4">
                    <span class="gora1 gora2"></span>
                     <div class="backtar backtar2 text-center">
-                        <div class="headfm"><p class="lvl heavy">Средний уровень  </p></div>
-                        <div class="bodyfm"><p class="aboutlvl book">Этот курс подойдет для <br>
-вас, если вы немного учили <br>
-английский раньше, но еще <br>
-не уверены в своих знаниях и <br>
-хотите выйти на достойный <br>
-уровень</p></div>
-                   <div class="footfm"><p class="result book"><span>Результат:</span> пройдем с Вами <br>
-путь от Pre-intermediate <br>
-до Upper-intermediate</p></div>
+					<!-- средний-->
+					<?php if ( have_posts() ) : query_posts('p=370');
+					while (have_posts()) : the_post(); ?>
+                        <div class="headfm"><p class="lvl heavy"><?php the_title();?></p></div>
+                        <div class="bodyfm"><?php the_content();?></p></div>
+                   <div class="footfm"><p class="result book"><span>Результат:</span> <?php echo (get_post_meta($post->ID, 'rez2', true)); ?></div>
                    <div class="butka"><button class="but4" data-toggle="modal" data-target="#m4" onclick="yaCounter35612965.reachGoal('Button1'); return true;"></button></div>
                     </div>
+					<? endwhile; endif; wp_reset_query(); ?>
                 </div>
                 <div class="col-md-4">
                    <span class="gora1 gora3"></span>
                     <div class="backtar backtar3 text-center">
-                        <div class="headfm"><p class="lvl heavy">Продвинутый уровень </p></div>
-                        <div class="bodyfm"><p class="aboutlvl book">Этот курс подойдет для вас, <br>
-если вы уже разбираетесь в <br>
-английском и хотите выйти <br>
-на серьезный уровень</p></div>
-                   <div class="footfm"><p class="result book"><span>Результат:</span> Поможем сделать <br>
-непростой шаг от Upper- <br>
-intermediate до Advanced</p></div>
+					<!-- продвинутый-->
+					<?php if ( have_posts() ) : query_posts('p=372');
+					while (have_posts()) : the_post(); ?>
+                        <div class="headfm"><p class="lvl heavy"><?php the_title();?></p></div>
+                       <div class="bodyfm"><?php the_content();?></p></div>
+                   <div class="footfm"><p class="result book"><span>Результат:</span> <?php echo (get_post_meta($post->ID, 'rez3', true)); ?></div>
                    <div class="butka"><button class="but4" data-toggle="modal" data-target="#m5" onclick="yaCounter35612965.reachGoal('Button1'); return true;"></button></div>
                     </div>
+					<? endwhile; endif; wp_reset_query(); ?>
                 </div>
             </div>
             <div class="row">
+			<?php if ( have_posts() ) : query_posts('p=366');
+					while (have_posts()) : the_post(); ?>
                 <div class="col-md-12 text-center">
-                    <p class="shadow knowlvl heavy">Уже знаете свой уровень английского или до сих пор сомневаетесь, <br>
-который из них у вас на данный момент?</p>
+                    <?php the_content();?>
                <button class="but5" data-toggle="modal" data-target="#m66" onclick="yaCounter35612965.reachGoal('Button1'); return true;"></button>
                 </div>
+				<? endwhile; endif; wp_reset_query(); ?>
             </div>
         </div>
     </section>
@@ -716,8 +737,10 @@ intermediate до Advanced</p></div>
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h2 class="black">Наши ученики работают<br>
-в таких компаниях, как:</h2>
+				<!-- наши ученики работают-->
+				<?php if ( have_posts() ) : query_posts('p=379');
+					while (have_posts()) : the_post(); ?>
+                    <h2 class="black"><?php the_title(); ?><br></h2>
                 </div>
             </div>
             <div class="row">
@@ -731,8 +754,9 @@ intermediate до Advanced</p></div>
             </div>
             <div class="row">
                 <div class="col-md-7 nopadl nopadr col-md-offset-3 text-center">
-                    <p class="smotri heavy">Посмотрите, каких результатов они достигают:</p>
+                    <?php the_content();?>
                     <span class="liniaf"></span>
+					<? endwhile; endif; wp_reset_query(); ?>
                 </div>
             </div>
         </div>
@@ -745,39 +769,54 @@ intermediate до Advanced</p></div>
                         
                         
                         
-                        
+                        <!--Ученик1-->
+						<?php if ( have_posts() ) : query_posts('p=382');
+					while (have_posts()) : the_post(); ?>
                     <div class="owl-stage-outer"><div style="transition: all 0s ease 0s; width: 7560px; transform: translate3d(-1890px, 0px, 0px);" class="owl-stage"><div style="width: 945px; margin-right: 0px;" class="owl-item cloned"><div class="item text-center">
-                            <div class="avatar" style="background-image: url('avatar3.jpg');"></div>
-                            <p class="name demi">Шупенев Игорь</p>
+                            <div class="avatar" style="background-image: url('<?php bloginfo('template_url'); ?>avatar3.jpg');"></div>
+                            <p class="name demi"><?php the_title(); ?></p>
                             <a href="https://vk.com/igorshalun" target="_top" class="vk demi">я Вконтакте</a>
-                            <p class="whatican heavy shadow">После 2-х месяцев учебы легко общаюсь в поездках</p>
-                            <p class="textotz book">Регулярно  летаю отдыхать, но без английского было очень некомфортно. Всегда приходилось объясняться “на пальцах” и меня часто не понимали. Сейчас отзанимался 2 месяца на начальном уровне и уже уверенно говорю на простые темы, а сложные мне не особо нужны. Успел слетать на неделю отдохнуть и заодно проверить то, что выучил за это время – результатами остался вполне доволен: свободно общаюсь с местными жителями, гидами и персоналом.</p>
-                        </div></div><div style="width: 945px; margin-right: 0px;" class="owl-item cloned"><div class="item text-center">
-                            <div class="avatar" style="background-image: url('avatar4.jpg');"></div>
-                            <p class="name demi">Леонтьев Дмитрий</p>
+							<?php echo (get_post_meta($post->ID, 'short1', true)); ?>
+							<?php the_content();?>
+							</div></div><div style="width: 945px; margin-right: 0px;" class="owl-item cloned"><div class="item text-center">
+                            <div class="avatar" style="background-image: url('<?php bloginfo('template_url'); ?>avatar4.jpg');"></div>
+                            <? endwhile; endif; wp_reset_query(); ?>
+							<!--Ученик2-->
+							<?php if ( have_posts() ) : query_posts('p=384');
+					while (have_posts()) : the_post(); ?>
+							<p class="name demi"><?php the_title(); ?></p>
                             <a href="https://www.linkedin.com/in/dmitry-leontyev-42b603a4?authType=name&amp;authToken=qm9o&amp;invAcpt=378790017_I6031440884480901125_500&amp;trk=eml-comm_invm-b-name-newinvite&amp;midToken=AQFWNbnS6cKwlQ&amp;fromEmail=fromEmail&amp;ut=1Vs4aa484icn81" target="_top" class="vk demi">я в Linked In</a>
-                            <p class="whatican heavy shadow">Вырос до уровня advanced и продвинулся в карьере</p>
-                            <p class="textotz book">Я много работаю и ценю свои деньги и время. Когда подбирал школу английского, я предъявлял весьма жесткие и точные критерии: Во-первых, чтобы не тратили мое время на ненужные знания. Во-вторых, мне был нужен конкретный результат: чтобы после курса я мог общаться с иностранными коллегами. Академа, как оказалось, соответствует обоим критериям, поэтому я уже занимаюсь на продвинутом курсе.</p>
-                        </div></div><div style="width: 945px; margin-right: 0px;" class="owl-item active center"><div class="item text-center">
+                            <?php echo (get_post_meta($post->ID, 'short2', true)); ?>
+                            <?php the_content();?>
+							</div></div><div style="width: 945px; margin-right: 0px;" class="owl-item active center"><div class="item text-center">
                             <div class="avatar" style="background-image: url('<?php bloginfo('template_url'); ?>/avatar.png');"></div>
-                            <p class="name demi">Татьяна Авдеева</p>
+                            <? endwhile; endif; wp_reset_query(); ?>
+							<!--Ученик3-->
+							<?php if ( have_posts() ) : query_posts('p=386');
+					while (have_posts()) : the_post(); ?>
+							<p class="name demi"><?php the_title(); ?></p>
                             <a href="https://vk.com/id94458054" target="_top" class="vk demi">я Вконтакте</a>
-                            <p class="whatican heavy shadow">Первый раз хожу на курсы с удовольствием</p>
-                            <p class="textotz book">Я шла с целью научиться хорошо говорить, потому что по работе говорить приходится немало. Очень боялась, что буду отставать от других и что буду плохо понимать, но на пробном занятии мне подобрали группу, состоящую из людей моего уровня. Сейчас занимаюсь уже 5-й месяц и уровень вырос очень сильно – это замечают и коллеги, и начальник. Очень благодарна Academa English и скоро планирую начать продвинутый курс!</p>
-                        </div></div><div style="width: 945px; margin-right: 0px;" class="owl-item"><div class="item text-center">
+                            <?php echo (get_post_meta($post->ID, 'short3', true)); ?>
+                            <?php the_content();?>
+							</div></div><div style="width: 945px; margin-right: 0px;" class="owl-item"><div class="item text-center">
                             <div class="avatar" style="background-image: url('<?php bloginfo('template_url'); ?>/avatar2.png');"></div>
-                            <p class="name demi">Рудольф Меликян</p>
+                            <? endwhile; endif; wp_reset_query(); ?>
+							<!--Ученик4-->
+							<?php if ( have_posts() ) : query_posts('p=388');
+					while (have_posts()) : the_post(); ?>
+							<p class="name demi"><?php the_title(); ?></p>
                             <a href="https://vk.com/id1998827" target="_top" class="vk demi">я Вконтакте</a>
-                            <p class="whatican heavy shadow">Занимался с репетитором, но перешел в Academa English</p>
-                            <p class="textotz book">Искал, где выучить английский язык и наткнулся на Академа Инглиш. Решил заказать бесплатный урок и посмотреть, как тут проходят занятия. Учитель очень порадовал – даже на пробном уроке обучил меня новому материалу и рассказал много интересного про английский язык. Собственно, я решил остаться и сейчас хожу уже 3 месяца и вполне доволен своим прогрессом.</p>
-                        </div></div><div style="width: 945px; margin-right: 0px;" class="owl-item"><div class="item text-center">
-                            <div class="avatar" style="background-image: url('avatar3.jpg');"></div>
-                            <p class="name demi">Шупенев Игорь</p>
+                            <?php echo (get_post_meta($post->ID, 'short4', true)); ?>
+                            <?php the_content();?>
+							</div></div><div style="width: 945px; margin-right: 0px;" class="owl-item"><div class="item text-center">
+                            <div class="avatar" style="background-image: url('<?php bloginfo('template_url'); ?>avatar3.jpg');"></div>
+                            <? endwhile; endif; wp_reset_query(); ?>
+							<p class="name demi">Шупенев Игорь</p>
                             <a href="https://vk.com/igorshalun" target="_top" class="vk demi">я Вконтакте</a>
                             <p class="whatican heavy shadow">После 2-х месяцев учебы легко общаюсь в поездках</p>
                             <p class="textotz book">Регулярно  летаю отдыхать, но без английского было очень некомфортно. Всегда приходилось объясняться “на пальцах” и меня часто не понимали. Сейчас отзанимался 2 месяца на начальном уровне и уже уверенно говорю на простые темы, а сложные мне не особо нужны. Успел слетать на неделю отдохнуть и заодно проверить то, что выучил за это время – результатами остался вполне доволен: свободно общаюсь с местными жителями, гидами и персоналом.</p>
                         </div></div><div style="width: 945px; margin-right: 0px;" class="owl-item"><div class="item text-center">
-                            <div class="avatar" style="background-image: url('avatar4.jpg');"></div>
+                            <div class="avatar" style="background-image: url('<?php bloginfo('template_url'); ?>avatar4.jpg');"></div>
                             <p class="name demi">Леонтьев Дмитрий</p>
                             <a href="https://www.linkedin.com/in/dmitry-leontyev-42b603a4?authType=name&amp;authToken=qm9o&amp;invAcpt=378790017_I6031440884480901125_500&amp;trk=eml-comm_invm-b-name-newinvite&amp;midToken=AQFWNbnS6cKwlQ&amp;fromEmail=fromEmail&amp;ut=1Vs4aa484icn81" target="_top" class="vk demi">я в Linked In</a>
                             <p class="whatican heavy shadow">Вырос до уровня advanced и продвинулся в карьере</p>
@@ -802,8 +841,10 @@ intermediate до Advanced</p></div>
     <section class="eleven" id="h2">
         <div class="container">
             <div class="row">
+			<?php if ( have_posts() ) : query_posts('p=391');
+					while (have_posts()) : the_post(); ?>
                 <div class="col-md-12 text-center">
-                    <h2>Как начать обучение?</h2>
+                    <h2><?php the_title(); ?></h2>
                     <span class="lincha"></span>
                 </div>
             </div>
@@ -811,43 +852,37 @@ intermediate до Advanced</p></div>
                 <div style="<?php wp_add_inline_style();?>visibility: hidden; animation-delay: 0.2s; animation-name: none;" class="col-md-3 text-center wow fadeIn" data-wow-delay="0.2s">
                    <span class="ednas"><img src="<?php bloginfo('template_url'); ?>/1_001.png" alt=""></span>
                     <img src="<?php bloginfo('template_url'); ?>/1_002.png" alt="">
-                    <p class="whatdo book">Вы записываетесь<br>
-на пробное занятие</p>
+                    <?php echo (get_post_meta($post->ID, 'Запись', true)); ?>
                 </div>
                 <div style="<?php wp_add_inline_style();?>visibility: hidden; animation-delay: 0.6s; animation-name: none;" class="col-md-6 text-center wow fadeIn" data-wow-delay="0.6s">
                     <img src="<?php bloginfo('template_url'); ?>/3_001.png" alt="">
-                    <p class="whatdo book">Вы оплачиваете<br>
-курс</p>
+                    <?php echo (get_post_meta($post->ID, 'Оплата', true)); ?>
                 </div>
                 <div style="<?php wp_add_inline_style();?>visibility: hidden; animation-delay: 1s; animation-name: none;" class="col-md-3 text-center wow fadeIn" data-wow-delay="1s">
                    <span class="ednas patk"><img src="<?php bloginfo('template_url'); ?>/5_001.png" alt=""></span>
                     <img src="<?php bloginfo('template_url'); ?>/5_002.png" alt="">
-                    <p class="whatdo book">Вы получаете сертификат<br>
-по окончании курса</p>
+                    <?php echo (get_post_meta($post->ID, 'Сертификат', true)); ?>
                 </div>
             </div>
             <div class="row rel">
                <span class="polosi"></span>
                 <div style="<?php wp_add_inline_style();?>visibility: hidden; animation-delay: 0.4s; animation-name: none;" class="col-md-3 pl42 col-md-offset-2 text-center wow fadeIn" data-wow-delay="0.4s">
                     <img src="<?php bloginfo('template_url'); ?>/2_001.png" alt="">
-                    <p class="whatdo book">Мы подбираем<br>
-Вам подходящую
-группу</p>
+                    <<?php echo (get_post_meta($post->ID, 'Группа', true)); ?>
                 </div>
                 <div style="<?php wp_add_inline_style();?>visibility: hidden; animation-delay: 0.8s; animation-name: none;" class="col-md-6 pl82 text-center wow fadeIn" data-wow-delay="0.8s">
                      <img src="<?php bloginfo('template_url'); ?>/4_001.png" alt="">
-                    <p class="whatdo book">Мы отправляем Вам <br>
-приглашение на e-mail и начинаем <br>
-с Вами заниматься</p>
+                    <?php echo (get_post_meta($post->ID, 'E-mail', true)); ?>
                 </div>
             </div>
         </div>
+		<? endwhile; endif; wp_reset_query(); ?>
     </section>
     <section class="tvelwe">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h2 id="h3">Сколько стоит обучение?</h2>
+                    <h2 id="h3"><?php echo get_cat_name(9);?></h2>
                 </div>
             </div>
             <div class="row">
@@ -861,23 +896,35 @@ intermediate до Advanced</p></div>
 		<div class="box" style="border-top-right-radius: 24px; border: medium none;">Выбрать</div>
 	</div>
 	<div class="box-row book hvs hvs1" data-toggle="modal" data-target="#m3">
-		<div class="box">Начальный</div>
-		<div class="box">580 Р.</div>
-		<div class="box">12</div>
+	<!-- Начальный-->
+	<?php if ( have_posts() ) : query_posts('p=393');
+					while (have_posts()) : the_post(); ?>
+		<div class="box"><?php the_title(); ?></div>
+ <?php echo (get_post_meta($post->ID, 'price1', true)); ?>
+  <?php echo (get_post_meta($post->ID, 'hours1', true)); ?>
 		<div class="box"><span class="chospkt"><i></i></span></div>
 	</div>
+	<? endwhile; endif; wp_reset_query(); ?>
 	<div class="box-row book hvs hvs2" data-toggle="modal" data-target="#m4">
-		<div class="box">Средний</div>
-		<div class="box">595 Р.</div>
-		<div class="box">12</div>
+	<!-- средний-->
+	<?php if ( have_posts() ) : query_posts('p=395');
+					while (have_posts()) : the_post(); ?>
+		<div class="box"><?php the_title(); ?></div>
+		<?php echo (get_post_meta($post->ID, 'price2', true)); ?>
+  <?php echo (get_post_meta($post->ID, 'hours2', true)); ?>
 		<div class="box"><span class="chospkt"><i></i></span></div>
 	</div>
+	<? endwhile; endif; wp_reset_query(); ?>
 	<div class="box-row book hvs hvs3" data-toggle="modal" data-target="#m5">
-		<div class="box" style="border-bottom-left-radius: 24px;">Продвинутый</div>
-		<div class="box">782 Р.</div>
-		<div class="box">12</div>
+	<!-- Продвинутый-->
+	<?php if ( have_posts() ) : query_posts('p=397');
+					while (have_posts()) : the_post(); ?>
+		<div class="box" style="border-bottom-left-radius: 24px;"><?php the_title(); ?></div>
+		<?php echo (get_post_meta($post->ID, 'price3', true)); ?>
+  <?php echo (get_post_meta($post->ID, 'hours3', true)); ?>
 		<div class="box" style="border-bottom-right-radius: 24px; border: medium none;"><span class="chospkt"><i></i></span></div>
 	</div>
+	<? endwhile; endif; wp_reset_query(); ?>
 </div>
                 </div>
             </div>
@@ -887,37 +934,39 @@ intermediate до Advanced</p></div>
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h2 class="black">наши гарантии</h2>
+				<!-- Гарантии-->
+				<?php if ( have_posts() ) : query_posts('p=400');
+					while (have_posts()) : the_post(); ?>
+                    <h2 class="black"><?php the_title(); ?></h2>
                 </div>
             </div>
             <div class="row icsns rel">
                <span class="part1"></span>
                 <div class="col-md-12 text-center">
                     <img src="<?php bloginfo('template_url'); ?>/i1.png" alt="">
-                    <p class="nizicn book">В EnglishLandClub вы осваиваете весь материал на <span>100%</span></p>
-                </div>
+                  <?php echo (get_post_meta($post->ID, 'war1', true)); ?>
+				  </div>
             </div>
             <div class="row icsns">
                 <div class="col-md-12 text-center">
                     <img src="<?php bloginfo('template_url'); ?>/i2.png" alt="">
-                    <p class="nizicn book">Наши отзывчивые преподаватели всегда готовы поработать с вами<br>
-дополнительно и детально объяснить любой непонятный момент урока</p>
+                    <?php echo (get_post_meta($post->ID, 'war2', true)); ?>
                 </div>
             </div>
             <div class="row icsns rel">
                <span class="part2"></span>
                 <div class="col-md-12 text-center">
                     <img src="<?php bloginfo('template_url'); ?>/i3.png" alt="">
-                    <p class="nizicn book">Служба поддержки поможет наверстать<br>
-упущенное в любое удобное для вас время</p>
+                    <?php echo (get_post_meta($post->ID, 'war3', true)); ?>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 nopadl nopadr text-center">
-                    <p class="zdem">ЖДЕМ ВАС НА ЗАНЯТИЯХ!</p>
+                    <?php the_content();?>
                 </div>
             </div>
         </div>
+		<? endwhile; endif; wp_reset_query(); ?>
     </section>
     <?php get_footer(); ?>
     <div class="modal fade" id="m1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

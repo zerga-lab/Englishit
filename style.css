@@ -881,7 +881,7 @@ body { font-family: "intro"; background-image: url('bgbody.png'); background-pos
 .two { background-image: url('bg1.png'); background-position: center -86px; background-repeat: no-repeat; height: 1121px; }
 .ttle { font-size: 45px; color: rgb(255, 255, 255); margin-bottom: 0px; line-height: 52px; padding-top: 90px; text-align: center; text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3); }
 .bgbord { text-align: center; width: 570px; height: 60px; background-color: rgb(255, 255, 255); margin: 20px auto 0px; display: block; border: 5px solid rgb(186, 69, 69); font-size: 30px; color: rgb(82, 75, 94); text-transform: uppercase; padding-top: 4px; box-shadow: 0px 6px 14px -7px rgba(0, 0, 0, 0.57); }
-.want { text-align: center; font-size: 25px; color: rgb(255, 255, 255); line-height: 32px; margin-top: 30px; }
+.want { text-align: center !important; font-size: 25px !important; color: rgb(255, 255, 255) !important; line-height: 32px !important; margin-top: 30px !important;}
 .want span { color: rgb(162, 209, 9); }
 .numbr { font-size: 25px; color: rgb(162, 209, 9); margin-bottom: 0px; line-height: 32px; text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3); position: relative; display: inline-block; }
 .numbr::before { width: 32px; height: 1px; background-color: rgb(162, 209, 9); display: block; content: ""; position: absolute; top: 17px; left: -50px; }
@@ -963,7 +963,7 @@ h2 span.gol { color: rgb(184, 243, 242); }
 .knowlvl { font-size: 23px; color: rgb(255, 255, 255); line-height: 38px; margin-top: 145px; }
 .but5 { outline: medium none; background: transparent url('but5.png') repeat scroll 0% 0%; border: medium none; width: 503px; height: 192px; margin-top: 20px; }
 .but5:hover { background-position: 0px bottom; }
-.owls img { width: auto ! important; }
+.owls img {  width:auto ! important; }
 .mdl { display: table-cell; vertical-align: middle; width: 100%; }
 .owls .item { height: 100px; display: table; }
 .owl-prev { background-image: url('arow.png'); width: 49px; height: 48px; display: block; transform: rotate(180deg); position: absolute; left: -153px; top: 30px; z-index: 1001010; opacity: 0.5; background-repeat: no-repeat; }
