@@ -1,8 +1,10 @@
+<?php get_template_part("head"); ?>
+<body>
     <section class="head">
         <div class="container">
             <div class="row">
                 <div class="col-md-2">
-                    <img src="<?php bloginfo('template_url'); ?>/logotip.png" alt="" class="logotip">
+                    <img src="<?php  echo get_stylesheet_directory_uri() ?>/img/logotip.png" alt="" class="logotip">
                 </div>
                 <div class="col-md-8">
                     <nav class="navbar navbar-default">
