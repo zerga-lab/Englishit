@@ -11,12 +11,18 @@ if ( have_posts() ) {
 		<h1><a href="<?php the_permalink() ?>"><?php the_title()?></a></h1>
 		
 		</div>
+		<?php if (!is_single()){?>
 		<div class="col-md-4">
 		<div class="avatar" style="background-image: url('<?=the_post_thumbnail_url() ?>')">&nbsp;</div>
 		</div>
-		<div class="col-md-8 content">
+		<div class="col-md-8 content excerpt">
+		<?php the_excerpt()?>
+		</div>
+		<?php }else{?>
+		<div class="col-md-12 content">
 		<?php the_content()?>
 		</div>
+		<?php }?>
 		<?php 
 	} 
 } 

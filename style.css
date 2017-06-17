@@ -17,13 +17,24 @@ Version: 0.3
 }
 
 .two.inner{
+	background-color:#94bf09;
 	padding-top:10px;
+	background-image: url('./img/bg1.png');
+	background-position: center -86px;
+	background-repeat: no-repeat;
+	min-height: 1121px;
+	height:auto;
+	
 	
 }
 
 .inner .content{
 	color: white;
-	background: rgba(0,0,0,0.05);
+	background: rgba(0,0,0,0.1);
+}
+
+.inner .content.excerpt{
+	line-height:2.1;
 }
 
 .inner .title{
