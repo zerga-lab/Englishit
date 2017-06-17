@@ -33,6 +33,13 @@ function load_my_script() {
 			'jquery' 
 	), false, true );
 }
+function zeng_register_menus() {
+	register_nav_menus ( array (
+			'mainMenu' => "Верхнее меню",
+			'extraMenu' => "Дополнительное меню" 
+	) );
+}
+add_action ( 'init', 'zeng_register_menus' );
 
 add_action ( 'wp_enqueue_scripts', 'load_my_script' );
 
