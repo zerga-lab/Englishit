@@ -39,6 +39,33 @@ function zeng_register_menus() {
 			'extraMenu' => "Дополнительное меню" 
 	) );
 }
+
+// дополнительные настройки
+function zeng_customize_register($wp_customize) {
+	$wp_customize->add_setting ( 'phone_number', array (
+			'default' => ''
+	) );
+	$wp_customize->add_setting ( 'slogan2', array (
+			'default' => ''
+	) );
+
+	$wp_customize->add_section( 'zeng_params' , array(
+			'title'      => "Школьные настройки",
+			'priority'   => 10,
+	) );
+
+	$wp_customize->add_control ( new WP_Customize_Control ( $wp_customize, 'phone_number', array (
+			'label' => "Номер телефона",
+			'section'=>'zeng_params'
+	) ) );
+	$wp_customize->add_control ( new WP_Customize_Control ( $wp_customize, 'slogan2', array (
+			'label' => "Слоган под меню",
+			'section'=>'zeng_params'
+	) ) );
+
+}
+add_action ( 'customize_register', 'zeng_customize_register' );
+
 add_action ( 'init', 'zeng_register_menus' );
 
 add_action ( 'wp_enqueue_scripts', 'load_my_script' );
