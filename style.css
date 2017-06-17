@@ -4,6 +4,32 @@ Description: Englishit site
 Author: zerga labs
 Version: 0.3
 */
+
+.inner h1{
+	color:white;
+	background: #543667;
+	padding:15px;
+	border-radius:50% 0 50% 0;
+}
+
+.inner h1 a{
+	color:white;
+}
+
+.two.inner{
+	padding-top:10px;
+	
+}
+
+.inner .content{
+	color: white;
+	background: rgba(0,0,0,0.05);
+}
+
+.inner .title{
+	margin-top:20px;
+}
+
 html {
 	font-family: sans-serif;
 }
@@ -2431,6 +2457,17 @@ blockquote footer::before, blockquote small::before, blockquote .small::before
 .navbar-default .navbar-nav>li>a {
 	color: rgb(119, 119, 119);
 }
+
+.navbar-default .navbar-nav>li.current-menu-item>a{
+	border-bottom: 3px solid red;
+} 
+
+.navbar-default .navbar-nav>li.current-menu-parent>a{
+	border-bottom: 3px solid orange;
+} 
+
+
+
 
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus
 	{

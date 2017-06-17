@@ -223,8 +223,7 @@
 					конфиденциальности</a>
 			</div>
 			<div class="col-md-4 right">
-				<a href="#" target="_top"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/up.png"
-					alt=""></a>
+				<a href="#" target="_top">&copy; Сайт выращен в лаборатории "Зерга"</a>
 			</div>
 		</div>
 	</div>
