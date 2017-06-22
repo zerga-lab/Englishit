@@ -2,6 +2,7 @@
 <section class="two">
 	<div class="container">
 		<div class="row">
+<<<<<<< HEAD
 		   <?php
 					
 if (have_posts ()) :
@@ -13,6 +14,19 @@ if (have_posts ()) :
 				<p class="ttle"><?php the_title();?></p>
 				<!-- Подзаголовок -->
 				<div class="bgbord"><?php the_content(); ?></div>
+=======
+		   <?php
+					
+if (have_posts ()) :
+						query_posts ( 'cat=2' );
+						while ( have_posts () ) :
+							the_post ();
+							?>
+               <div class="col-md-12">
+				<p class="ttle"><?php echo get_cat_name(2);?></p>
+				<!-- Подзаголовок -->
+				<div class="bgbord"><?php echo category_description(2); ?></div>
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 				<!-- Описание -->
 
 				<p class="want heavy"><?php echo (get_post_meta($post->ID, 'h2', true)); ?></p>
@@ -50,12 +64,21 @@ if (have_posts ()) :
 				<div class="bgwwithborder">
 
 					<!-- Устали --> 
+<<<<<<< HEAD
 				   <?php
 							
 if (have_posts ()) :
 								query_posts ( 'name=tired' );
 								while ( have_posts () ) :
 									the_post ();
+=======
+				   <?php
+							
+if (have_posts ()) :
+								query_posts ( 'p=265' );
+								while ( have_posts () ) :
+									the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 									?>
                        <p class="trd heavy"><?php the_title(); ?></p>
 					<p class="subtrd book"><?php the_content(); ?></p>
@@ -67,12 +90,21 @@ if (have_posts ()) :
                <div class="col-md-4 col-md-offset-1">
 				<div class="bgwwithborder" style="border-radius: 50px;">
 					<!-- Ищите --> 
+<<<<<<< HEAD
 				   <?php
 							
 if (have_posts ()) :
 								query_posts ( 'name=searched' );
 								while ( have_posts () ) :
 									the_post ();
+=======
+				   <?php
+							
+if (have_posts ()) :
+								query_posts ( 'p=262' );
+								while ( have_posts () ) :
+									the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 									?>
                        <p class="trd heavy"><?php the_title(); ?></p>
 					<p class="subtrd book"><?php the_content(); ?></p>
@@ -84,12 +116,21 @@ if (have_posts ()) :
                <div class="col-md-3 nopadl nopadr col-md-offset-1">
 				<div class="bgwwithborder">
 					<!-- Надоело -->   
+<<<<<<< HEAD
 				    <?php
 								
 if (have_posts ()) :
 									query_posts ( 'name=bother' );
 									while ( have_posts () ) :
 										the_post ();
+=======
+				    <?php
+								
+if (have_posts ()) :
+									query_posts ( 'p=268' );
+									while ( have_posts () ) :
+										the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 										?>
                        <p class="trd heavy"><?php the_title(); ?></p>
 					<p class="subtrd book"><?php the_content(); ?></p>
@@ -102,12 +143,21 @@ if (have_posts ()) :
 		<div class="row">
 			<div class="col-md-12 text-center">
 				<!-- Знакомо --> 
+<<<<<<< HEAD
 			   <?php
 						
 if (have_posts ()) :
 							query_posts ( 'name=znakomo' );
 							while ( have_posts () ) :
 								the_post ();
+=======
+			   <?php
+						
+if (have_posts ()) :
+							query_posts ( 'p=270' );
+							while ( have_posts () ) :
+								the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 								?>
                    <p class="znak"><?php the_title(); ?></p>
 				<p class="subznak book"><?php the_content(); ?></p>
@@ -121,22 +171,40 @@ if (have_posts ()) :
 		<div class="row">
 			<div class="col-md-12 text-center">
 				<!-- easy english --> 
+<<<<<<< HEAD
 					<?php
 					
 if (have_posts ()) :
 						query_posts ( 'name=easy-english' );
 						while ( have_posts () ) :
 							the_post ();
+=======
+					<?php
+					
+if (have_posts ()) :
+						query_posts ( 'p=281' );
+						while ( have_posts () ) :
+							the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 							?>
                     <h2><?php the_content(); ?></h2>
 					<? endwhile; endif; wp_reset_query(); ?>
 <!-- Do you know --> 
+<<<<<<< HEAD
 					<?php
 					
 if (have_posts ()) :
 						query_posts ( 'name=do-you-know' );
 						while ( have_posts () ) :
 							the_post ();
+=======
+					<?php
+					
+if (have_posts ()) :
+						query_posts ( 'cat=15' );
+						while ( have_posts () ) :
+							the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 							?>
  <p class="youdon shadow heavy"><?php the_content(); ?></p>
 				<span class="linia mb85"></span>
@@ -171,23 +239,38 @@ if (have_posts ()) :
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 text-center">
+<<<<<<< HEAD
 			<?php
 			$category = get_category_by_slug('sec3');
 				echo '<h2 style="margin-bottom: 65px;" id="h1">';
 				echo $category->cat_name;
 				echo'</h2>';
 				?>
+=======
+
+				<h2 style="margin-bottom: 65px;" id="h1"><?php echo get_cat_name(4);?></p>
+				</h2>
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-7 nopadr brdrbt">
 				<span class="eden">01</span>
+<<<<<<< HEAD
 				   <?php
 							
 if (have_posts ()) :
 								query_posts ( 'name=learn' );
 								while ( have_posts () ) :
 									the_post ();
+=======
+				   <?php
+							
+if (have_posts ()) :
+								query_posts ( 'p=289' );
+								while ( have_posts () ) :
+									the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 									?>
                     <p class="pravdali demi" style="padding-top: 24px;"><?php the_title(); ?></p>
 				<p class="answeronit "><?php the_content(); ?></p>
@@ -203,12 +286,21 @@ if (have_posts ()) :
 			</div>
 			<div class="col-md-7 nopadr brdrbt" style="min-height: 310px;">
 				<span class="eden" style="left: -47px;">02</span>
+<<<<<<< HEAD
 				   <?php
 							
 if (have_posts ()) :
 								query_posts ( 'name=noneffected' );
 								while ( have_posts () ) :
 									the_post ();
+=======
+				   <?php
+							
+if (have_posts ()) :
+								query_posts ( 'p=291' );
+								while ( have_posts () ) :
+									the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 									?>
                     <p class="pravdali demi" style="padding-top: 24px; padding-left: 0px;"><?php the_title(); ?></p>
 				<p class="answeronit " style="padding-left: 0px; font-size: 19px;"><?php the_content(); ?></p>
@@ -218,12 +310,21 @@ if (have_posts ()) :
 		<div class="row">
 			<div class="col-md-7 nopadr brdrbt">
 				<span class="eden">03</span>
+<<<<<<< HEAD
 				     <?php
 									
 if (have_posts ()) :
 										query_posts ( 'name=grammarrules' );
 										while ( have_posts () ) :
 											the_post ();
+=======
+				     <?php
+									
+if (have_posts ()) :
+										query_posts ( 'p=294' );
+										while ( have_posts () ) :
+											the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 											?>
                     <p class="pravdali demi" style="padding-top: 24px;"><?php the_title(); ?></p>
 				<p class="answeronit "><?php the_content(); ?></p>
@@ -239,12 +340,21 @@ if (have_posts ()) :
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 text-center">
+<<<<<<< HEAD
 				 <?php
 					
 if (have_posts ()) :
 						query_posts ( 'name=getstarted' );
 						while ( have_posts () ) :
 							the_post ();
+=======
+				 <?php
+					
+if (have_posts ()) :
+						query_posts ( 'p=316' );
+						while ( have_posts () ) :
+							the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 							?>
                     <?php the_content(); ?>
                 </div>
@@ -268,12 +378,21 @@ if (have_posts ()) :
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 text-center">
+<<<<<<< HEAD
 				<?php
 				
 if (have_posts ()) :
 					query_posts ( 'name=freeeng' );
 					while ( have_posts () ) :
 						the_post ();
+=======
+				<?php
+				
+if (have_posts ()) :
+					query_posts ( 'p=297' );
+					while ( have_posts () ) :
+						the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 						?>
                     <h2 class="black"><?php the_title();?></h2>
 				<p class="subziza heavy"><?php the_content();?></p>
@@ -284,12 +403,21 @@ if (have_posts ()) :
 		<div class="row mb150 rel">
 			<span class="tropa"></span>
 			<div class="col-md-6 nopadl nopadr">
+<<<<<<< HEAD
 				<?php
 				
 if (have_posts ()) :
 					query_posts ( 'name=profjump' );
 					while ( have_posts () ) :
 						the_post ();
+=======
+				<?php
+				
+if (have_posts ()) :
+					query_posts ( 'p=320' );
+					while ( have_posts () ) :
+						the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 						?>
                     <p class="heavy skak" style="padding-top: 45px;"><?php the_title();?></p>
 				<p class="subskak book"><?php the_content();?></p>
@@ -305,12 +433,21 @@ if (have_posts ()) :
 				<img src="<?php  echo get_stylesheet_directory_uri() ?>/img/icn5.png" alt="" class="mn icns">
 			</div>
 			<div class="col-md-7 nopadl nopadr">
+<<<<<<< HEAD
 				<?php
 				
 if (have_posts ()) :
 					query_posts ( 'name=traveling' );
 					while ( have_posts () ) :
 						the_post ();
+=======
+				<?php
+				
+if (have_posts ()) :
+					query_posts ( 'p=322' );
+					while ( have_posts () ) :
+						the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 						?>
 				<p class="heavy skak" style="padding-top: 40px;"><?php the_title();?></p>
 				<p class="subskak book"><?php the_content();?></p>
@@ -319,12 +456,21 @@ if (have_posts ()) :
             </div>
 		<div class="row">
 			<div class="col-md-6 col-md-offset-2 nopadl nopadr">
+<<<<<<< HEAD
 				<?php
 				
 if (have_posts ()) :
 					query_posts ( 'name=foreignsites' );
 					while ( have_posts () ) :
 						the_post ();
+=======
+				<?php
+				
+if (have_posts ()) :
+					query_posts ( 'p=328' );
+					while ( have_posts () ) :
+						the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 						?>
                     <p class="heavy skak"><?php the_title();?></p>
 				<p class="subskak book"><?php the_content();?></p>
@@ -336,12 +482,21 @@ if (have_posts ()) :
 		</div>
 		<div class="row">
 			<div class="col-md-12 text-center">
+<<<<<<< HEAD
 				<?php
 				
 if (have_posts ()) :
 					query_posts ( 'name=choice' );
 					while ( have_posts () ) :
 						the_post ();
+=======
+				<?php
+				
+if (have_posts ()) :
+					query_posts ( 'p=326' );
+					while ( have_posts () ) :
+						the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 						?>
                  <p class="heavy ourpupils"><?php the_content();?></p>
 				<div style="  visibility: hidden; animation-iteration-count: infinite; animation-name: none;" class=" wow bounce" alt="" data-wow-iteration="infinite">
@@ -369,12 +524,21 @@ if (have_posts ()) :
 												<img src="<?php  echo get_stylesheet_directory_uri() ?>/img/1.png" alt="">01
 											</p>
 											<!-- заметные результаты-->
+<<<<<<< HEAD
 				<?php
 				
 if (have_posts ()) :
 					query_posts ( 'name=visibleresults' );
 					while ( have_posts () ) :
 						the_post ();
+=======
+				<?php
+				
+if (have_posts ()) :
+					query_posts ( 'p=357' );
+					while ( have_posts () ) :
+						the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 						?>
 				<p class="zam heavy"><?php the_title();?></p>
 											<span class="linsk"></span>
@@ -386,12 +550,21 @@ if (have_posts ()) :
 												<img src="<?php  echo get_stylesheet_directory_uri() ?>/img/2.png" alt="">02
 											</p>
 											<!--Английский с доставкой на дом-->
+<<<<<<< HEAD
 				<?php
 				
 if (have_posts ()) :
 					query_posts ( 'name=english-in-home' );
 					while ( have_posts () ) :
 						the_post ();
+=======
+				<?php
+				
+if (have_posts ()) :
+					query_posts ( 'p=337' );
+					while ( have_posts () ) :
+						the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 						?>
 				<p class="zam heavy"><?php the_title();?></p>
 											<span class="linsk"></span>
@@ -403,12 +576,21 @@ if (have_posts ()) :
 												<img src="<?php  echo get_stylesheet_directory_uri() ?>/img/3.png" alt="">03
 											</p>
 											<!--Комфортное обучение-->
+<<<<<<< HEAD
 				<?php
 				
 if (have_posts ()) :
 					query_posts ( 'name=comfortable-learning' );
 					while ( have_posts () ) :
 						the_post ();
+=======
+				<?php
+				
+if (have_posts ()) :
+					query_posts ( 'p=339' );
+					while ( have_posts () ) :
+						the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 						?>
 				<p class="zam heavy"><?php the_title();?></p>
 											<span class="linsk"></span>
@@ -420,12 +602,21 @@ if (have_posts ()) :
 											<p class="odns">
 												<img src="<?php  echo get_stylesheet_directory_uri() ?>/img/4.png" alt="">04
 											</p>
+<<<<<<< HEAD
                 <?php
 																
 if (have_posts ()) :
 																	query_posts ( 'name=certificate' );
 																	while ( have_posts () ) :
 																		the_post ();
+=======
+                <?php
+																
+if (have_posts ()) :
+																	query_posts ( 'p=341' );
+																	while ( have_posts () ) :
+																		the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 																		?>
 				<p class="zam heavy"><?php the_title();?></p>
 											<span class="linsk"></span>
@@ -437,12 +628,21 @@ if (have_posts ()) :
 												<img src="<?php  echo get_stylesheet_directory_uri() ?>/img/5.png" alt="">05
 											</p>
 											<!--У нас нет отстающих -->
+<<<<<<< HEAD
 				<?php
 				
 if (have_posts ()) :
 					query_posts ( 'name=havent-alone' );
 					while ( have_posts () ) :
 						the_post ();
+=======
+				<?php
+				
+if (have_posts ()) :
+					query_posts ( 'p=343' );
+					while ( have_posts () ) :
+						the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 						?>
 				<p class="zam heavy"><?php the_title();?></p>
 											<span class="linsk"></span>
@@ -455,12 +655,21 @@ if (have_posts ()) :
 											</p>
 
 											<!--Квалифицированные преподаватели -->
+<<<<<<< HEAD
 				<?php
 				
 if (have_posts ()) :
 					query_posts ( 'name=good-teachers' );
 					while ( have_posts () ) :
 						the_post ();
+=======
+				<?php
+				
+if (have_posts ()) :
+					query_posts ( 'p=345' );
+					while ( have_posts () ) :
+						the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 						?>
 				<p class="zam heavy"><?php the_title();?></p>
 											<span class="linsk"></span>
@@ -920,12 +1129,21 @@ if (have_posts ()) :
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 text-center">
+<<<<<<< HEAD
 				<?php
 				
 if (have_posts ()) :
 					query_posts ( 'name=who' );
 					while ( have_posts () ) :
 						the_post ();
+=======
+				<?php
+				
+if (have_posts ()) :
+					query_posts ( 'p=366' );
+					while ( have_posts () ) :
+						the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 						?>
                     <h2><?php the_title();?></h2>
 			</div>
@@ -937,12 +1155,21 @@ if (have_posts ()) :
 				<div class="backtar backtar1 text-center">
 					<!-- Уровни-->
 					<!-- начальный-->
+<<<<<<< HEAD
 					<?php
 					
 if (have_posts ()) :
 						query_posts ( 'name=lowlvl' );
 						while ( have_posts () ) :
 							the_post ();
+=======
+					<?php
+					
+if (have_posts ()) :
+						query_posts ( 'p=368' );
+						while ( have_posts () ) :
+							the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 							?>
                         <div class="headfm">
 						<p class="lvl heavy"><?php the_title();?></p>
@@ -965,12 +1192,21 @@ if (have_posts ()) :
 				<span class="gora1 gora2"></span>
 				<div class="backtar backtar2 text-center">
 					<!-- средний-->
+<<<<<<< HEAD
 					<?php
 					
 if (have_posts ()) :
 						query_posts ( 'name=midlvl' );
 						while ( have_posts () ) :
 							the_post ();
+=======
+					<?php
+					
+if (have_posts ()) :
+						query_posts ( 'p=370' );
+						while ( have_posts () ) :
+							the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 							?>
                         <div class="headfm">
 						<p class="lvl heavy"><?php the_title();?></p>
@@ -993,12 +1229,21 @@ if (have_posts ()) :
 				<span class="gora1 gora3"></span>
 				<div class="backtar backtar3 text-center">
 					<!-- продвинутый-->
+<<<<<<< HEAD
 					<?php
 					
 if (have_posts ()) :
 						query_posts ( 'name=highlvl' );
 						while ( have_posts () ) :
 							the_post ();
+=======
+					<?php
+					
+if (have_posts ()) :
+						query_posts ( 'p=372' );
+						while ( have_posts () ) :
+							the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 							?>
                         <div class="headfm">
 						<p class="lvl heavy"><?php the_title();?></p>
@@ -1019,6 +1264,7 @@ if (have_posts ()) :
                 </div>
 		</div>
 		<div class="row">
+<<<<<<< HEAD
 			<?php
 			
 if (have_posts ()) :
@@ -1034,6 +1280,21 @@ if (have_posts ()) :
 					onclick="yaCounter35612965.reachGoal('Button1'); return true;"></button>
 			</div>
 			
+=======
+			<?php
+			
+if (have_posts ()) :
+				query_posts ( 'p=366' );
+				while ( have_posts () ) :
+					the_post ();
+					?>
+                <div class="col-md-12 text-center">
+                    <?php the_content();?>
+               <button class="but5" data-toggle="modal" data-target="#m66"
+					onclick="yaCounter35612965.reachGoal('Button1'); return true;"></button>
+			</div>
+				<? endwhile; endif; wp_reset_query(); ?>
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
             </div>
 	</div>
 </section>
@@ -1042,12 +1303,21 @@ if (have_posts ()) :
 		<div class="row">
 			<div class="col-md-12 text-center">
 				<!-- наши ученики работают-->
+<<<<<<< HEAD
 				<?php
 				
 if (have_posts ()) :
 					query_posts ( 'name=ourpupils' );
 					while ( have_posts () ) :
 						the_post ();
+=======
+				<?php
+				
+if (have_posts ()) :
+					query_posts ( 'p=379' );
+					while ( have_posts () ) :
+						the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 						?>
                     <h2 class="black"><?php the_title(); ?><br>
 				</h2>
@@ -1156,12 +1426,21 @@ if (have_posts ()) :
 
 
 					<!--Ученик1-->
+<<<<<<< HEAD
 						<?php
 						
 if (have_posts ()) :
 							query_posts ( 'name=shupenev' );
 							while ( have_posts () ) :
 								the_post ();
+=======
+						<?php
+						
+if (have_posts ()) :
+							query_posts ( 'p=382' );
+							while ( have_posts () ) :
+								the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 								?>
                     <div class="owl-stage-outer">
 						<div
@@ -1181,12 +1460,21 @@ if (have_posts ()) :
 									<div class="avatar" style="background-image: url('<?php  echo get_stylesheet_directory_uri() ?>/img/avatar4.jpg');"></div>
                             <? endwhile; endif; wp_reset_query(); ?>
 							<!--Ученик2-->
+<<<<<<< HEAD
 							<?php
 							
 if (have_posts ()) :
 								query_posts ( 'name=leon' );
 								while ( have_posts () ) :
 									the_post ();
+=======
+							<?php
+							
+if (have_posts ()) :
+								query_posts ( 'p=384' );
+								while ( have_posts () ) :
+									the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 									?>
 							<p class="name demi"><?php the_title(); ?></p>
 									<a
@@ -1201,12 +1489,21 @@ if (have_posts ()) :
 									<div class="avatar" style="background-image: url('<?php  echo get_stylesheet_directory_uri() ?>/img/avatar.png');"></div>
                             <? endwhile; endif; wp_reset_query(); ?>
 							<!--Ученик3-->
+<<<<<<< HEAD
 							<?php
 							
 if (have_posts ()) :
 								query_posts ( 'name=avdeeva' );
 								while ( have_posts () ) :
 									the_post ();
+=======
+							<?php
+							
+if (have_posts ()) :
+								query_posts ( 'p=386' );
+								while ( have_posts () ) :
+									the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 									?>
 							<p class="name demi"><?php the_title(); ?></p>
 									<a href="https://vk.com/id94458054" target="_top" class="vk demi">я Вконтакте</a>
@@ -1219,12 +1516,21 @@ if (have_posts ()) :
 									<div class="avatar" style="background-image: url('<?php  echo get_stylesheet_directory_uri() ?>/img/avatar2.png');"></div>
                             <? endwhile; endif; wp_reset_query(); ?>
 							<!--Ученик4-->
+<<<<<<< HEAD
 							<?php
 							
 if (have_posts ()) :
 								query_posts ( 'name=melikjan' );
 								while ( have_posts () ) :
 									the_post ();
+=======
+							<?php
+							
+if (have_posts ()) :
+								query_posts ( 'p=388' );
+								while ( have_posts () ) :
+									the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 									?>
 							<p class="name demi"><?php the_title(); ?></p>
 									<a href="https://vk.com/id1998827" target="_top" class="vk demi">я Вконтакте</a>
@@ -1305,12 +1611,21 @@ if (have_posts ()) :
 <section class="eleven" id="h2">
 	<div class="container">
 		<div class="row">
+<<<<<<< HEAD
 			<?php
 			
 if (have_posts ()) :
 				query_posts ( 'name=howstarted' );
 				while ( have_posts () ) :
 					the_post ();
+=======
+			<?php
+			
+if (have_posts ()) :
+				query_posts ( 'p=391' );
+				while ( have_posts () ) :
+					the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 					?>
                 <div class="col-md-12 text-center">
 				<h2><?php the_title(); ?></h2>
@@ -1336,9 +1651,15 @@ if (have_posts ()) :
 		<div class="row rel">
 			<span class="polosi"></span>
 			<div style="visibility: hidden; animation-delay: 0.4s; animation-name: none;" class="col-md-3 pl42 col-md-offset-2 text-center wow fadeIn" data-wow-delay="0.4s">
+<<<<<<< HEAD
 				<img src="<?php  echo get_stylesheet_directory_uri() ?>/img/2_001.png" alt=""> <<?php
 					
 echo (get_post_meta ( $post->ID, 'Группа', true ));
+=======
+				<img src="<?php  echo get_stylesheet_directory_uri() ?>/img/2_001.png" alt=""> <<?php
+					
+echo (get_post_meta ( $post->ID, 'Группа', true ));
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 					?>
 			</div>
 			<div style="visibility: hidden; animation-delay: 0.8s; animation-name: none;" class="col-md-6 pl82 text-center wow fadeIn" data-wow-delay="0.8s">
@@ -1353,6 +1674,7 @@ echo (get_post_meta ( $post->ID, 'Группа', true ));
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 text-center">
+<<<<<<< HEAD
 				<?php
 			$category = get_category_by_slug('sec8');
 				echo '<h2 style="margin-bottom: 65px;" id="h1">';
@@ -1360,6 +1682,9 @@ echo (get_post_meta ( $post->ID, 'Группа', true ));
 				echo'</h2>';
 				?>
 			</div>
+=======
+				<h2 id="h3"><?php echo get_cat_name(9);?></h2>
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 			</div>
 		</div>
 		<div class="row">
@@ -1375,12 +1700,21 @@ echo (get_post_meta ( $post->ID, 'Группа', true ));
 					</div>
 					<div class="box-row book hvs hvs1" data-toggle="modal" data-target="#m3">
 						<!-- Начальный-->
+<<<<<<< HEAD
 	<?php
 	
 if (have_posts ()) :
 		query_posts ( 'name=lowprice' );
 		while ( have_posts () ) :
 			the_post ();
+=======
+	<?php
+	
+if (have_posts ()) :
+		query_posts ( 'p=393' );
+		while ( have_posts () ) :
+			the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 			?>
 		<div class="box"><?php the_title(); ?></div>
  <?php echo (get_post_meta($post->ID, 'price1', true)); ?>
@@ -1392,12 +1726,21 @@ if (have_posts ()) :
 	<? endwhile; endif; wp_reset_query(); ?>
 	<div class="box-row book hvs hvs2" data-toggle="modal" data-target="#m4">
 						<!-- средний-->
+<<<<<<< HEAD
 	<?php
 	
 if (have_posts ()) :
 		query_posts ( 'name=midprice' );
 		while ( have_posts () ) :
 			the_post ();
+=======
+	<?php
+	
+if (have_posts ()) :
+		query_posts ( 'p=395' );
+		while ( have_posts () ) :
+			the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 			?>
 		<div class="box"><?php the_title(); ?></div>
 		<?php echo (get_post_meta($post->ID, 'price2', true)); ?>
@@ -1409,12 +1752,21 @@ if (have_posts ()) :
 	<? endwhile; endif; wp_reset_query(); ?>
 	<div class="box-row book hvs hvs3" data-toggle="modal" data-target="#m5">
 						<!-- Продвинутый-->
+<<<<<<< HEAD
 	<?php
 	
 if (have_posts ()) :
 		query_posts ( 'name=highprice' );
 		while ( have_posts () ) :
 			the_post ();
+=======
+	<?php
+	
+if (have_posts ()) :
+		query_posts ( 'p=397' );
+		while ( have_posts () ) :
+			the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 			?>
 		<div class="box" style="border-bottom-left-radius: 24px;"><?php the_title(); ?></div>
 		<?php echo (get_post_meta($post->ID, 'price3', true)); ?>
@@ -1434,12 +1786,21 @@ if (have_posts ()) :
 		<div class="row">
 			<div class="col-md-12 text-center">
 				<!-- Гарантии-->
+<<<<<<< HEAD
 				<?php
 				
 if (have_posts ()) :
 					query_posts ( 'name=warranties' );
 					while ( have_posts () ) :
 						the_post ();
+=======
+				<?php
+				
+if (have_posts ()) :
+					query_posts ( 'p=400' );
+					while ( have_posts () ) :
+						the_post ();
+>>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 						?>
                     <h2 class="black"><?php the_title(); ?></h2>
 			</div>
