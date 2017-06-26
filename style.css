@@ -4298,8 +4298,8 @@ a {
 /* ::::: http://busines-up.ru/jobs/english/css/media.css ::::: */
 @media screen and (max-width: 1199px) {
 	.navbar-nav>li {
-		padding-left: 20px;
-		padding-right: 20px;
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 	.phone {
 		font-size: 18px;
@@ -4889,3 +4889,14 @@ a {
 	font-size: 14px;
 	text-align: center;
 }
+
+.modal.in{
+	opacity:1;
+}
+
+.modal.in .modal-dialog { 
+	transform: translate(0, 0);
+	opacity:1;
+ } 
+
+.modal-backdrop.in { .opacity(@modal-backdrop-opacity); } 

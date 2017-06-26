@@ -42,7 +42,7 @@ if (have_posts ()) :
            <div class="row">
 			<div class="col-md-12 text-center">
 				<button class="but1" data-toggle="modal" data-target="#m2"
-					onclick="yaCounter35612965.reachGoal('Button1'); return true;"></button>
+					></button>
 			</div>
 		</div>
 		<div class="row">
@@ -60,7 +60,7 @@ if (have_posts ()) :
                        <p class="trd heavy"><?php the_title(); ?></p>
 					<p class="subtrd book"><?php the_content(); ?></p>
 					<button class="but2" data-toggle="modal" data-target="#m2"
-						onclick="yaCounter35612965.reachGoal('Button1'); return true;"></button>
+						></button>
 				</div>
 			</div>
 			   <? endwhile; endif; wp_reset_query(); ?>
@@ -77,7 +77,7 @@ if (have_posts ()) :
                        <p class="trd heavy"><?php the_title(); ?></p>
 					<p class="subtrd book"><?php the_content(); ?></p>
 					<button class="but2" data-toggle="modal" data-target="#m2"
-						onclick="yaCounter35612965.reachGoal('Button1'); return true;"></button>
+						></button>
 				</div>
 			</div>
 			   <? endwhile; endif; wp_reset_query(); ?>
@@ -94,7 +94,7 @@ if (have_posts ()) :
                        <p class="trd heavy"><?php the_title(); ?></p>
 					<p class="subtrd book"><?php the_content(); ?></p>
 					<button class="but2" data-toggle="modal" data-target="#m2"
-						onclick="yaCounter35612965.reachGoal('Button1'); return true;"></button>
+						></button>
 				</div>
 			</div>
 			   <? endwhile; endif; wp_reset_query(); ?>
@@ -257,7 +257,7 @@ if (have_posts ()) :
 						value="" class="in1 book mob" name="phone" placeholder="Ваш телефон..." type="text"> <input
 						class="hide" name="form" value="Форма 'Хватит вопросов давайте начинать'" type="hidden">
 					<button class="send" type="submit"
-						onclick="yaCounter35612965.reachGoal('Button1'); return true;"></button>
+						></button>
 				</form>
 			</div>
 		</div>
@@ -957,7 +957,7 @@ if (have_posts ()) :
 <? endwhile; endif; wp_reset_query(); ?>
                    <div class="butka">
 						<button class="but4" data-toggle="modal" data-target="#m3"
-							onclick="yaCounter35612965.reachGoal('Button1'); return true;"></button>
+							></button>
 					</div>
 				</div>
 			</div>
@@ -984,7 +984,7 @@ if (have_posts ()) :
 					</div>
 					<div class="butka">
 						<button class="but4" data-toggle="modal" data-target="#m4"
-							onclick="yaCounter35612965.reachGoal('Button1'); return true;"></button>
+							></button>
 					</div>
 				</div>
 					<? endwhile; endif; wp_reset_query(); ?>
@@ -1012,7 +1012,7 @@ if (have_posts ()) :
 					</div>
 					<div class="butka">
 						<button class="but4" data-toggle="modal" data-target="#m5"
-							onclick="yaCounter35612965.reachGoal('Button1'); return true;"></button>
+							></button>
 					</div>
 				</div>
 					<? endwhile; endif; wp_reset_query(); ?>
@@ -1031,7 +1031,7 @@ if (have_posts ()) :
 					<? endwhile; endif; wp_reset_query(); ?>
 					
                <button class="but5" data-toggle="modal" data-target="#m66"
-					onclick="yaCounter35612965.reachGoal('Button1'); return true;"></button>
+					></button>
 			</div>
 			
             </div>

@@ -13,8 +13,8 @@
 				</div>
 				<div class="col-md-2 right nopadl nopadr">
 					<p class="phone book"><?php echo get_theme_mod('phone_number')?></p>
-					<a href="http://w-webs.ru" class="begfree heavy" data-toggle="modal" data-target="#m1"
-						onclick="yaCounter35612965.reachGoal('Button1'); return true;">начать бесплатно</a>
+					<a href="/start" class="begfree heavy" data-toggle="modal" data-target="#m1">начать
+						бесплатно</a>
 				</div>
 			</div>
 		</div>
