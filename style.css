@@ -4872,6 +4872,7 @@ a {
 	opacity:1;
  } 
 
+<<<<<<< HEAD
 .modal-backdrop.in { .opacity(@modal-backdrop-opacity); } 
 
 .send {
@@ -4903,3 +4904,6 @@ a {
 	border: 5px solid transparent;
 	margin-bottom: 20px;
 }
+=======
+.modal-backdrop.in { .opacity(@modal-backdrop-opacity); } 
+>>>>>>> 9c596ea961f42377cc2988b3272f5c73ef0d07ce
