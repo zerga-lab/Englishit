@@ -1242,9 +1242,9 @@ body {
 }
 
 input, button, select, textarea {
-	font-family: inherit;
-	font-size: inherit;
-	line-height: inherit;
+    font-family: inherit;
+    font-size: x-large;
+    line-height: inherit;
 }
 
 a {
@@ -3553,20 +3553,6 @@ h2 span.gol {
 	line-height: 52px;
 }
 
-.in1 {
-	outline: medium none;
-	background: rgb(255, 255, 255) none repeat scroll 0% 0%;
-	width: 360px;
-	border-radius: 70px;
-	padding-left: 50px;
-	padding-right: 50px;
-	color: rgb(32, 32, 32);
-	margin-left: 15px;
-	margin-right: 15px;
-	height: 100px;
-	transition: all 0.3s ease 0s;
-	border: 5px solid transparent;
-}
 
 *::-moz-placeholder {
 	color: rgb(32, 32, 32);
@@ -3841,11 +3827,7 @@ h2 span.gol {
 
 .but5 {
 	outline: medium none;
-<<<<<<< HEAD
 	background: transparent url('img/but5.png') repeat scroll 0% 0%;
-=======
-	background: transparent url('but5.png') repeat scroll 0% 0%;
->>>>>>> b964b6642f840c38ff9744951eea91960022e55b
 	border: medium none;
 	width: 503px;
 	height: 192px;
@@ -4195,7 +4177,7 @@ h2 span.gol {
 	line-height: 40px;
 	text-align: center;
 	margin-bottom: 50px;
-	margin-top: 30px;
+	margin-top: 50px;
 }
 
 .modalorm, .modalform1, .modalform2, .modalform3, .modalform4,
@@ -4302,8 +4284,8 @@ a {
 /* ::::: http://busines-up.ru/jobs/english/css/media.css ::::: */
 @media screen and (max-width: 1199px) {
 	.navbar-nav>li {
-		padding-left: 20px;
-		padding-right: 20px;
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 	.phone {
 		font-size: 18px;
@@ -4344,20 +4326,7 @@ a {
 	.answeronit {
 		font-size: 16px ! important;
 	}
-	.in1 {
-		outline: medium none;
-		border: medium none;
-		background: rgb(255, 255, 255) none repeat scroll 0% 0%;
-		width: 315px;
-		border-radius: 70px;
-		padding-left: 50px;
-		padding-right: 50px;
-		color: rgb(32, 32, 32);
-		margin-left: 9px;
-		margin-right: 9px;
-		height: 100px;
-		transition: all 0.3s ease 0s;
-	}
+
 	.subskak {
 		font-size: 16px;
 	}
@@ -4892,4 +4861,45 @@ a {
 	padding: 30px 0px 5px 0px;
 	font-size: 14px;
 	text-align: center;
+}
+
+.modal.in{
+	opacity:1;
+}
+
+.modal.in .modal-dialog { 
+	transform: translate(0, 0);
+	opacity:1;
+ } 
+
+.modal-backdrop.in { .opacity(@modal-backdrop-opacity); } 
+
+.send {
+    outline: medium none;
+    border: medium none;
+    background: transparent url('./img/but3.png') repeat scroll 0% 0%;
+    width: 272px;
+    height: 148px;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 2px;
+    margin-top: 5px;
+	margin-left: 40px;
+	margin-bottom: 0px;
+	margin-right: 40px;
+}
+
+
+.in1 {
+	outline: medium none;
+	background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+	width: 360px;
+	border-radius: 70px;
+	padding-left: 50px;
+	padding-right: 50px;
+	color: rgb(32, 32, 32);
+	height: 100px;
+	transition: all 0.3s ease 0s;
+	border: 5px solid transparent;
+	margin-bottom: 20px;
 }
